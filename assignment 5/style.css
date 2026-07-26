@@ -1,0 +1,470 @@
+*{
+ margin: 0;
+ padding: 0;
+box-sizing: border-box;
+font-family: 'heletica neue';
+}
+html,
+body{
+height: 100%;
+ width: 100%;
+}
+
+/* navigation */
+nav{
+    display: flex;
+    align-items: center;
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.left-nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.left-nav a:hover{
+    color: gray;
+}
+
+.left-nav img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    padding-left: 20px;
+}
+
+.right-nav{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.login{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signup{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+/* main */
+
+.hero{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.hero h1{
+    font-size: 9.5vh;
+    line-height: 1.1;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: inherit;
+
+}
+
+.hero p{
+    font-size: 30px;
+    margin-top: 30px;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-align: center;
+    
+}
+
+/* Searching bar */
+
+.search-bar{
+    width: 60%;
+    margin: 50px auto;
+    background-color: #f3f3f6;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+}
+
+.search-bar input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.shots{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-right: 20px;
+    
+}
+
+.shots h1{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.shots i{
+    font-size: 30px;
+}
+
+.icon{
+    width: 55px;
+    height: 55px;
+
+    background-color: #ea4c89;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.icon i{
+    color: white;
+    font-size: 22px;
+}
+
+.search-bar:hover{
+    background-color: transparent;
+}
+
+.shots:hover{
+    background-color: white;
+}
+
+.icon:hover{
+    background-color: white;
+}
+
+.icon:hover i{
+    color: #ea4c89;
+}
+
+/* option section */
+
+.trending{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.trending p{
+    color: gray;
+    font-size: 22px;
+}
+
+.tags{
+    display: flex;
+    gap: 15px;
+}
+
+.tags span{
+    background-color: #f3f3f6;
+    padding: 12px 22px;
+    border-radius: 30px;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.tags span:hover{
+    background-color: white;
+}
+
+/* Categories */
+
+.bottom-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+    margin-top: 80px;
+    padding: 0 40px;
+}
+
+.popular{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    border: 1px solid lightgray;
+    border-radius: 20px;
+
+    padding: 12px 18px;
+
+    cursor: pointer;
+}
+
+.popular h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.popular i{
+    font-size: 24px;
+}
+
+.categories{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.categories span{
+    font-size: 22px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.active{
+    background-color: #f3f3f6;
+    padding: 15px 22px;
+    border-radius: 30px;
+}
+
+.filters{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid lightgray;
+    border-radius: 30px;
+
+    padding: 12px 20px;
+
+    cursor: pointer;
+}
+
+.filters h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.filters i{
+    font-size: 22px;
+}
+
+/* cards */
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+
+    cursor: pointer;
+    /* hovering effect condition */
+    position: relative;
+    overflow: hidden;
+}
+
+.card img,
+.card video{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.hover{
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.card:hover .hover{
+    opacity: 1;
+}
+
+.hover h3 ,h4{
+    color: white;
+    font-size: 18px;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+.icons i{
+    background-color: white;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+.icons i:hover{
+    background-color: #ea4c89;
+    color: white;
+}
+
+/* button*/
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up{
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Slide-bar */
+.logo{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.animate{
+    display: flex;
+    gap: 80px;
+    width: max-content;
+    animation: scroll 16s linear infinite;
+}
+
+.animate img{
+    width: 80px;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+
+/* footer */
+footer{
+    padding: 80px 50px 40px;
+}
+
+.footer-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.footer-links{
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: black;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.social-icons{
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons i{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 60px;
+}
+
+.left-bottom,
+.right-bottom{
+    display: flex;
+    gap: 25px;
+}
+
+.left-bottom a,
+.right-bottom a{
+    text-decoration: none;
+    color: gray;
+
+    font-size: 18px;
+}
+
+
+
+
+
+

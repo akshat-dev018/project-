@@ -1,0 +1,376 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'heletica neue';
+}
+html,
+body{
+height: 100%;
+ width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 22% 20% 7% 27% 22%;
+    grid-template-rows: 29% 24% 7% 18% 18%;
+    gap: 5px;
+    grid-template-areas:  
+    "top-left top-center1 top-center1 top-center2 top-right"
+    "top-left top-main-center top-main-center top-main-center top-right"
+    "top-bottom top-main-center top-main-center top-main-center top-right" 
+    "top-bottom top-main-center top-main-center top-main-center  top-right-bottom"
+    "top-bottom top-bottom2 top-bottom3 top-bottom3 top-right-bottom"
+    ;
+}
+
+.top-left{
+    background: radial-gradient(rgb(245, 123, 143),rgba(255, 255, 255, 0.936));
+    grid-area: top-left;
+    border-radius: 20px;
+}
+
+.top-center1{
+    background-color: rgba(255, 255, 255, 0.959);
+    grid-area: top-center1;
+    border-radius: 20px;
+}
+
+.top-center2{
+    background-color: white;
+    grid-area: top-center2;
+    border:2px solid white;
+    border-radius: 20px;
+}
+
+.top-right{
+    background-color: white;
+    grid-area: top-right;
+    border-radius: 20px;
+    padding: 30px;
+   
+}
+
+.top-bottom{
+    background-color:black;
+    grid-area: top-bottom;
+    border-radius: 20px;
+}
+
+.top-main-center{
+    background-color: rgb(255, 182, 193);
+    grid-area: top-main-center;
+    border:2px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.top-bottom2{
+    background-color: white;
+    grid-area: top-bottom2;
+    border:2px solid white;
+    border-radius: 20px;
+}
+
+.top-bottom3{
+    background-color:rgba(255, 255, 255, 0.863);
+    grid-area: top-bottom3;
+    border:2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-right-bottom{
+    background-color: white;
+    grid-area:top-right-bottom;
+    border:2px solid white;
+    border-radius: 20px;
+}
+
+/* IMAGE IN CENTER */
+.circle{
+    height: 100%;
+    width: 50%;
+    background: radial-gradient(rgb(232, 207, 211),rgb(245, 124, 144));
+    border-radius: 50%;
+    
+}
+
+.top-main-center img{
+    position: absolute;
+    bottom: 0;
+    height: 350px;
+}
+
+
+/* BOTTOM 3 */
+
+.bottom3-div1 h3{
+    font-size: 15px;
+}
+
+.bottom3-div1 p{
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.bottom3-div1 button{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    margin-top: 9px;
+    padding: 10px 20px;
+    border: none;
+}
+
+.top-bottom3 img{
+    height: 90%;
+}
+
+/* top-right  images*/
+
+.top-right img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: -10px;
+    border: 2px solid black;
+}
+
+.top-right p{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.top-right h3{
+    margin-top: 10px;
+}
+
+h3.number{
+    font-size: 50px;
+}
+
+.daily-client{
+    position: relative;
+}
+
+.top-right i{
+    font-size: 30px;
+   position: absolute;
+   margin-left: 200px;
+   margin-top: -80px;
+}
+
+.increase{
+    color: rgb(222, 30, 161);
+    padding-bottom: 3px;
+}
+
+/* top center 2 */
+
+
+.new-user h2{
+    padding: 20px;
+}
+
+.new-user h3{
+    font-size: 50px;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+.new-user p{
+    margin-left: 30px;
+}
+.new-user .green{
+    color: green;
+}
+
+.top-center2 i{
+    margin-left: 300px;
+    font-size: 30px;
+}
+
+/* top-bottom */
+
+.smart-digital{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smart-digital h2{
+    padding: 20px;
+    color: white;
+}
+
+.smart-digital i{
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.top-bottom img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 30%;
+}
+
+.images img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: -10px;
+    border: 2px solid black;
+    margin-top: 5px;
+}
+
+/* top-bottom2 */
+
+.font{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fonts{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.font img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.top-bottom2 img{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    margin-top: -20px;
+    margin-left: 15px;
+}
+
+.viewall{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bottom2 p{
+    margin-top: -10px;
+}
+
+/* top-left */
+
+.design{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.design h3{
+    padding: 20px;
+}
+
+.design p{
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.progress{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-left img{
+    height: 110px;
+    width: 110px;   
+}
+
+.contributions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contributions p{
+    margin-top: 10px;
+}
+
+.contributions button{
+    border-radius: 100px;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    border: 1px solid white;
+}
+
+/* top-right-bottom */
+
+.cubo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cubo img{
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+}
+
+.cubo button{
+    padding: 4px;
+    margin-top: 20px;
+    font-size: 15px;
+    background: radial-gradient(lab(72.79% 42.52 8.46),hsla(0, 0%, 100%, 0.984));
+    border-radius: 100px;
+}
+
+/* top-center1  */
+.projectviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    margin-right: 200px;
+}
+
+.projectviews p{
+    margin-top: 10px;
+}
+
+.button button{
+    background-color: transparent;
+    color: rgb(253, 67, 98);
+    border-radius: 100px;
+}
+
+.heart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -75px;
+    margin-left: -60px;
+    font-size: 20px;
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Pokemon UI</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  
+  <link rel="stylesheet" href="./pokemon.css">
+
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- BACKGROUND BLOBS -->
+
+    <div class="blob1"></div>
+    <div class="blob2"></div>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+      <button class="icon-btn">☰</button>
+
+      <div class="logo">Pokémon</div>
+
+      <button class="icon-btn">☀</button>
+
+    </header>
+
+    <!-- SEARCH + FILTERS -->
+
+    <section class="controls">
+
+      <div class="search-box">
+
+        <span>🔍</span>
+
+        <input
+          type="text"
+          placeholder="Search for a Pokémon..."
+        >
+
+      </div>
+
+      <div class="filters">
+
+        <button class="filter-btn">
+          Filter by types ▼
+        </button>
+
+        <button class="filter-btn">
+          ⇅
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- POKEMON CARDS -->
+
+    <section class="cards">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+
+        <span class="pokemon-id">#0908</span>
+
+        <button class="favorite">♡</button>
+
+        <div class="image-wrapper">
+
+          <div class="circle"></div>
+
+          <img
+            class="pokemon-img"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/908.png"
+          >
+
+        </div>
+
+        <h2>Meowscarada</h2>
+
+        <div class="card-bottom">
+
+          <div class="types">
+            <span class="badge grass">GRASS</span>
+          </div>
+
+          <button class="arrow-btn">→</button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+
+        <span class="pokemon-id">#0624</span>
+
+        <button class="favorite">♡</button>
+
+        <div class="image-wrapper">
+
+          <div class="circle"></div>
+
+          <img
+            class="pokemon-img"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/624.png"
+          >
+
+        </div>
+
+        <h2>Pawniard</h2>
+
+        <div class="card-bottom">
+
+          <div class="types">
+            <span class="badge dark">DARK</span>
+          </div>
+
+          <button class="arrow-btn">→</button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+
+        <span class="pokemon-id">#0229</span>
+
+        <button class="favorite">♡</button>
+
+        <div class="image-wrapper">
+
+          <div class="circle"></div>
+
+          <img
+            class="pokemon-img"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png"
+          >
+
+        </div>
+
+        <h2>Houndoom</h2>
+
+        <div class="card-bottom">
+
+          <div class="types">
+            <span class="badge dark">DARK</span>
+            <span class="badge fire">FIRE</span>
+          </div>
+
+          <button class="arrow-btn">→</button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+
+        <span class="pokemon-id">#0686</span>
+
+        <button class="favorite">♡</button>
+
+        <div class="image-wrapper">
+
+          <div class="circle"></div>
+
+          <img
+            class="pokemon-img"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/686.png"
+          >
+
+        </div>
+
+        <h2>Inkay</h2>
+
+        <div class="card-bottom">
+
+          <div class="types">
+            <span class="badge water">DARK</span>
+            <span class="badge psychic">PSYCHIC</span>
+          </div>
+
+          <button class="arrow-btn">→</button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+      <div class="feature">
+
+        <div class="feature-icon blue">◉</div>
+
+        <div>
+          <h4>Explore</h4>
+          <p>Discover all your favorite Pokémon</p>
+        </div>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon green">🍃</div>
+
+        <div>
+          <h4>Filter</h4>
+          <p>Find Pokémon by types and abilities</p>
+        </div>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon yellow">★</div>
+
+        <div>
+          <h4>Collection</h4>
+          <p>Save and manage your collection</p>
+        </div>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon purple">⌘</div>
+
+        <div>
+          <h4>Stats</h4>
+          <p>View stats and learn about Pokémon</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      © 2024 Pokémon. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>
