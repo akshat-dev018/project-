@@ -1,21 +1,41 @@
 import { Mail, Lock, Eye, ArrowRight } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import Input from "../common/Input";
 import Button from "../common/Button";
+import { toast } from "react-toastify";
 
 const LoginForm = () => {
+
+  const navigate = useNavigate();
+
+  const onSubmit = (data)=>{
+
+    const storedUser = JSON.parse(localStorage.getItem("skymartUser"));
+
+    if(!storedUser){
+      toast.warn("No Account Found");
+      return;
+    }
+
+    if(
+       storedUser.email === data.email &&
+
+       storedUser.password === data.password
+    ){
+      toast.success("Login Successful");
+      localStorage.setItem("currentUser",JSON.stringify(storedUser));
+      navigate("/home")
+    }
+    else{
+      toast.warn("Invalid Credentials");
+    }
+
+  }
+
   return (
     <div
-      className="
-      w-full
-      max-w-xl
-      bg-[#111]
-      rounded-3xl
-      p-10
-      shadow-2xl
-      "
-    >
+      className="w-full max-w-xl bg-[#111] rounded-3xl p-10 shadow-2xl ">
 
       <h1 className="text-5xl font-bold text-white">
         Sign in
@@ -42,14 +62,15 @@ const LoginForm = () => {
 
         <Button>
 
-          <div className="flex justify-center items-center gap-3">
+          <Link to={"/home"}
+          className="flex justify-center items-center gap-3">
 
             Sign In
 
             <ArrowRight />
 
             {/* ye sb button ke children hai */}
-          </div>
+          </Link>
 
         </Button>
 

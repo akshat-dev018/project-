@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { registerSchema } from "../schemas/registerSchemas";
 
@@ -14,6 +14,8 @@ import {
   Lock,
   ArrowLeft,
 } from "lucide-react";
+
+import { toast } from "react-toastify";
 
 function RegisterForm() {
   const {
@@ -31,8 +33,20 @@ function RegisterForm() {
 
   const password = watch("password", "");
 
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
-    console.log(data);
+    
+    const user = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    };
+     
+    localStorage.setItem("skymartUser",JSON.stringify(user));
+    toast.success("Registration Successful!");
+    navigate("/login");
+
   };
 
   return (
