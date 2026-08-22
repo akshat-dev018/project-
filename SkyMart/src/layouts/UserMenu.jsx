@@ -1,8 +1,10 @@
 import React from 'react'
 import { ShoppingCart, LogOut } from "lucide-react";
+import useCart from "../hooks/useCart";
 
-const UserMenu = () => {
+const UserMenu = ({handleLogout}) => {
   const user = JSON.parse(localStorage.getItem("currentUser"));
+  const { cartCount,setIsCartOpen} = useCart();
 
   return (
     <div className="flex items-center gap-4">
@@ -19,12 +21,25 @@ const UserMenu = () => {
 
       </div>
 
-      <button className="rounded-2xl border border-zinc-700 p-3 hover:border-lime-400">
-        <ShoppingCart size={20} />
-      </button>
+<button
+  onClick={() => setIsCartOpen(true)}
+  className="relative"
+>
+  <ShoppingCart className='text-white cursor-pointer' size={22} />
 
-      <button className="rounded-2xl border border-zinc-700 p-3 hover:border-red-500">
-        <LogOut size={20} />
+  {cartCount > 0 && (
+    <span
+      className=" absolute -right-2  -top-2  flex  h-5  min-w-5  items-center  justify-center  rounded-full  bg-lime-400  px-1  text-xs  font-bold  text-blac "
+    >
+      {cartCount}
+    </span>
+  )}
+
+</button>
+
+      <button onClick={handleLogout}
+         className="rounded-2xl border border-zinc-700 p-3 hover:border-red-500">
+        <LogOut className='text-white' size={20} />
       </button>
 
     </div>

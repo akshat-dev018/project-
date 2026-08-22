@@ -72,21 +72,7 @@ const Hero = () => {
         >
 
           <div
-            className="
-              w-52
-
-              rounded-3xl
-
-              border
-
-              border-lime-400/30
-
-              bg-lime-400/10
-
-              p-8
-
-              text-center
-            "
+            className= "w-52 rounded-3xl border border-lime-400/30 bg-lime-400/10 p-8 text-cent "
           >
 
             <h2

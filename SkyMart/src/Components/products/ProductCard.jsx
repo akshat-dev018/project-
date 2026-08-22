@@ -1,11 +1,21 @@
 import React from "react";
 import { Link } from "react-router";
 import { ShoppingCart, Star } from "lucide-react";
+import { useNavigate } from "react-router";
+import useCart from "../../hooks/useCart";
 
 const ProductCard = ({ product }) => {
+
+   const navigate = useNavigate();
+   const {addToCart,cartItems} = useCart();
+
+     const cartItem = cartItems.find(
+    (item) => item.id === product.id
+  );
+
   return (
-    <Link to={`/products/${product.id}`}>
-      <div className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-lime-400 transition duration-300">
+    <div onClick={() => navigate(`/products/${product.id}`)} >
+      <div className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-lime-400 transition duration-300 cursor-pointer">
 
         {/* Image */}
         <div className="bg-white h-64 flex items-center justify-center p-6">
@@ -53,21 +63,24 @@ const ProductCard = ({ product }) => {
             </h3>
 
             <button
-              className="bg-lime-400 text-black p-3 rounded-xl hover:scale-105 transition"
-              onClick={(e) => {
-                e.preventDefault();
-                console.log("Add to cart");
+            onClick={(e) => {
+              e.stopPropagation();
+               addToCart(product);
               }}
-            >
-              <ShoppingCart size={18} />
-            </button>
+    className=" flex items-center gap-2 rounded-xl  bg-lime-400 px-4 py-3  text-black transition  hover:bg-lime-30  "
+>
+  <ShoppingCart size={18} />
+
+  {cartItem ? `Added (${cartItem.quantity})` : "Add"}
+
+</button>
 
           </div>
 
         </div>
 
       </div>
-    </Link>
+    </div>
   );
 };
 

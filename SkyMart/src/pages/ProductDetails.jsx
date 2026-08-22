@@ -58,6 +58,20 @@ const ProductDetails = () => {
 
     }
 
+      if (!product) {
+
+    return (
+      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+
+        <p className="text-xl text-red-500">
+          Product not found
+        </p>
+
+      </div>
+    );
+
+  }
+
     return (
 
         <div className="max-w-7xl mx-auto px-8 py-10">

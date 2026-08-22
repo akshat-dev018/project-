@@ -43,7 +43,7 @@ function RegisterForm() {
       password: data.password,
     };
      
-    localStorage.setItem("skymartUser",JSON.stringify(user));
+    localStorage.setItem("user",JSON.stringify(user));
     toast.success("Registration Successful!");
     navigate("/login");
 
